@@ -23,10 +23,10 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2-beta
       with:
-        version: 12
+        version: 13
     - name: creating build
       run: npm build  
     - name: install surge
       run: npm install -g surge
     - name: deploy surge
-      run: surge ./build http://bootcamp-class2-react.surge.sh/ --token "74039916ba94c46cfe199d2dddf127c7"
+      run: surge ./build bootcamp-class2-react.surge.sh --token ${{secrets.SURGE_TOKEN}}
