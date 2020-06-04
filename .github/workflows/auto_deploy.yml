@@ -25,7 +25,7 @@ jobs:
       with:
         version: 12
     - name: creating build
-      run: npm build  
+      run: npm run-script build  
     - name: install surge
       run: npm install -g surge
     - name: deploy surge
