@@ -24,8 +24,7 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         version: 12
-    - name: Build in the project
-      run: npm run build
+      cmd: install
     - name: install surge
       run: npm install -g surge
     - name: deploy surge
