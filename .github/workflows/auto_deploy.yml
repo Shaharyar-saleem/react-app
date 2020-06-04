@@ -24,8 +24,9 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         version: 12
-      cmd: install
+    - name: creating build
+      run: npm build  
     - name: install surge
       run: npm install -g surge
     - name: deploy surge
-      run: surge ./build bootcamp-class2-react.surge.sh --token${{secrets.SURGE_TOKEN}}
+      run: surge ./build http://bootcamp-class2-react.surge.sh/ --token$ {{secrets.SURGE_TOKEN}}
