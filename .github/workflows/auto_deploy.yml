@@ -23,9 +23,9 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2-beta
       with:
-        version: 13
+        version: 12
     - name: creating build
-      run: npm build  
+      run: npm run build  
     - name: install surge
       run: npm install -g surge
     - name: deploy surge
